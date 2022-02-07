@@ -13,28 +13,18 @@ public class AtHomeCodingExercise {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> testingList = new ArrayList<>();
+        String testingString = "HelloPunk";
 
-//        testingList = null;
-        testingList.add(1);
-        testingList.add(5);
-        testingList.add(2);
-        testingList.add(1);
-        testingList.add(10);
-
-        try {
-            System.out.println(aboveBelow(testingList, 6));
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+        for (int i = 1; i < 30; i++) {
+            System.out.println(stringRotation(testingString, i));
         }
-
     }
 
     /**
      * aboveBelow - accepts two arguments.
      *
      * @param list (An unsorted collection of integers, ArrayList)
-     * @param comparisonVal (an integer)
+     * @param comparisonVal (an integer, int)
      * @return HashMap<String, Integer> of the format {"above": int, "below":
      * int}
      */
@@ -61,6 +51,24 @@ public class AtHomeCodingExercise {
 
         return result;
 
+    }
+
+    /**
+     * stringRotation - accepts two parameters
+     *
+     * @param originalString (the original string, String)
+     * @param rotationAmt (the rotation amount, positive int)
+     * @return String - the rotated string
+     */
+    public static String stringRotation(String originalString, int rotationAmt) {
+
+        int length = originalString.length();
+
+        int offsetAmt = rotationAmt % length;
+
+        String result = originalString.substring(offsetAmt, length) + originalString.substring(0, offsetAmt);
+
+        return result;
     }
 
 }
