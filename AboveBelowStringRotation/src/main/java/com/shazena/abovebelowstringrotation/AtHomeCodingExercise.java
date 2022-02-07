@@ -11,15 +11,6 @@ import java.util.logging.Logger;
  */
 public class AtHomeCodingExercise {
 
-    public static void main(String[] args) {
-
-        String testingString = "HelloPunk";
-
-        for (int i = 1; i < 30; i++) {
-            System.out.println(stringRotation(testingString, i));
-        }
-    }
-
     /**
      * aboveBelow - accepts two arguments. Returns a Map indicating how many
      * numbers were above the comparison value and how many numbers were below
