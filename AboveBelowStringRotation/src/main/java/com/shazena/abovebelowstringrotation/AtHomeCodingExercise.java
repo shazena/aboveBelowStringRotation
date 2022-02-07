@@ -21,7 +21,9 @@ public class AtHomeCodingExercise {
     }
 
     /**
-     * aboveBelow - accepts two arguments.
+     * aboveBelow - accepts two arguments. Returns a Map indicating how many
+     * numbers were above the comparison value and how many numbers were below
+     * the comparison value.
      *
      * @param list (An unsorted collection of integers, ArrayList)
      * @param comparisonVal (an integer, int)
@@ -54,7 +56,13 @@ public class AtHomeCodingExercise {
     }
 
     /**
-     * stringRotation - accepts two parameters
+     * stringRotation - accepts two parameters. I determined this one by making
+     * a table where the first column is the rotation amount and the second is
+     * the rotated string. I made entries for up to 2.5 times the length of my
+     * test string and realized that there was a pattern at every multiple of
+     * the string length, which indicates modular division. I combined this
+     * information with the substring method and came up with the following
+     * solution.
      *
      * @param originalString (the original string, String)
      * @param rotationAmt (the rotation amount, positive int)
